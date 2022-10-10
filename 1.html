@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng cơ thể</title>
+</head>
+<body onload="bmi()">
+<h3>Chỉ số cân nặng:</h3>
+<p id="weight"></p>
+<h3>Chỉ số chiều cao:</h3>
+<p id="height"></p>
+<h3>Đánh giá:</h3>
+<p id="result"></p>
+<script>
+    function bmi() {
+    let w=+prompt('Nhập vào số cân nặng');
+    let h=+prompt('Nhập vào chiều cao');
+    let bmi=w/(h^2);
+    document.getElementById('weight').innerHTML=w.toFixed(2);
+    document.getElementById('height').innerHTML=h.toFixed(2);
+    if (bmi<18.5)
+        document.getElementById('result').innerHTML='Underweight';
+    else if (bmi<25.0)
+        document.getElementById('result').innerHTML='Normal';
+    else if (bmi<30)
+        document.getElementById('result').innerHTML='Overweight';
+    else document.getElementById('result').innerHTML='Obese';
+    }
+</script>
+</body>
+</html>
